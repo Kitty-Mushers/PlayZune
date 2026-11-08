@@ -1,5 +1,10 @@
-Welcome to MPlayer, The Movie Player. MPlayer can play most standard video
-formats out of the box and almost all others with the help of external codecs.
+# MPlayer
+
+Welcome to MPlayer, The Movie Player. 
+
+MPlayer can play most standard video formats out of the box and almost all others
+with the help of external codecs.
+
 MPlayer currently works best from the command line, but visual feedback for
 many functions is available from its onscreen status display (OSD), which is
 also used for displaying subtitles. MPlayer also has a GUI with skin support and
@@ -14,8 +19,8 @@ of your questions. If you have problems, please read the documentation in
 DOCS/HTML/en/index.html, which should help you solve most of your problems.
 Also read the man page to learn how to use MPlayer.
 
+**Requirements:**
 
-Requirements:
 - POSIX system: You need a POSIX-compatible shell and POSIX-compatible system
   tools like grep, sed, awk, etc. in your path.
 - You need a working development environment that can compile programs.
@@ -26,7 +31,8 @@ Requirements:
 - For the GUI you need the GTK development packages.
 
 
-Before you start...
+**Before you start...**
+
 Make sure that your version of X has Xvideo support, without it even very
 fast machines may not be able to properly play high resolution videos in
 fullscreen mode. Consult DOCS/HTML/en/video.html for details. There you may
@@ -34,9 +40,7 @@ also find out about special card-specific video output drivers that can yield
 optimal performance.
 
 
-______________________
-STEP0: Getting MPlayer
-~~~~~~~~~~~~~~~~~~~~~~
+## STEP0: Getting MPlayer
 
 Official releases and Subversion snapshots, as well as binary codec packages
 and a number of different skins for the GUI are available from the download
@@ -72,9 +76,7 @@ the past. You can later update your sources by saying
 from within that directory.
 
 
-_______________________________
-STEP1: Installing Binary Codecs
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## STEP1: Installing Binary Codecs
 
 Unpack the codecs archives and put the contents in a directory where MPlayer
 will find them. The default directory is /usr/local/lib/codecs/ (it used to be
@@ -82,9 +84,7 @@ will find them. The default directory is /usr/local/lib/codecs/ (it used to be
 something else by passing the '--codecsdir' option to './configure'.
 
 
-__________________________
-STEP2: Configuring MPlayer
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+## STEP2: Configuring MPlayer
 
 MPlayer can be adapted to all kinds of needs and hardware environments. Run
 
@@ -109,9 +109,7 @@ config.log for errors and reasons for the failure. Repeat this step until
 you are satisfied with the enabled feature set.
 
 
-________________________
-STEP3: Compiling MPlayer
-~~~~~~~~~~~~~~~~~~~~~~~~
+## STEP3: Compiling MPlayer
 
 Now you can start the compilation by typing
 
@@ -130,7 +128,7 @@ If you get 'unable to load shared library' or similar errors, run
 'ldd ./mplayer' to check which libraries fail and go back to STEP 3 to fix it.
 Sometimes running 'ldconfig' is enough to fix the problem.
 
-NOTE: If you run Debian you can configure, compile and build a proper Debian
+**NOTE:** If you run Debian you can configure, compile and build a proper Debian
 .deb package with only one command:
 
   debian/daily-build.sh -b
@@ -147,9 +145,7 @@ To clean up the source tree run the following command:
   fakeroot debian/rules clean
   rm debian/changelog
 
-______________________________________
-STEP4: Choose an onscreen display font
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## STEP4: Choose an onscreen display font
 
 You can use any TrueType font installed on your system. Just pass '-font
 /path/to/font.ttf' on the command line or add 'font=/path/to/font.ttf' to
@@ -158,9 +154,7 @@ you can create a symbolic link from either ~/.mplayer/subfont.ttf or
 /usr/local/share/mplayer/subfont.ttf to your TrueType font.
 
 
-____________________________
-STEP5: Installing a GUI skin
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## STEP5: Installing a GUI skin
 
 Unpack the archive and put the contents in /usr/local/share/mplayer/skins/ or
 ~/.mplayer/skins/. MPlayer will use the skin in the subdirectory named default
@@ -169,9 +163,7 @@ via the '-skin' switch. You should therefore rename your skin subdirectory or
 make a suitable symbolic link.
 
 
-__________________
-STEP6: Let's play!
-~~~~~~~~~~~~~~~~~~
+## STEP6: Let's play!
 
 That's it for the moment. To start playing movies, open a command line and try
 
@@ -193,6 +185,7 @@ See 'mplayer -help' and 'man mplayer' for further options.
 
 'mplayer -vo help' will show you the available video output drivers. Experiment
 with the '-vo' switch to see which one gives you the best performance.
+
 If you get jerky playback or no sound, experiment with the '-ao' switch (see
 '-ao help') to choose between different audio drivers. Note that jerky playback
 is caused by buggy audio drivers or a slow processor and video card. With a
