@@ -65,7 +65,7 @@ you have to download and install them separately.
 You can also get MPlayer via Subversion. Issue the following commands to get
 the latest sources:
 
-  svn checkout svn://svn.mplayerhq.hu/mplayer/trunk mplayer
+  `svn checkout svn://svn.mplayerhq.hu/mplayer/trunk mplayer`
 
 A directory named 'mplayer' will be created. It will include all necessary
 FFmpeg libraries, you don't need to get them separately as was the case in
