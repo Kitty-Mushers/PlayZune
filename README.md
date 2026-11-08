@@ -7,8 +7,10 @@ with the help of external codecs.
 
 MPlayer currently works best from the command line, but visual feedback for
 many functions is available from its onscreen status display (OSD), which is
-also used for displaying subtitles. MPlayer also has a GUI with skin support and
-several unofficial alternative graphical frontends are available.
+also used for displaying subtitles.
+
+MPlayer also has a GUI with skin support and several unofficial alternative
+graphical frontends are available.
 
 MEncoder is a command line video encoder for advanced users that can be built
 from the MPlayer source tree. Unofficial graphical frontends exist but are
@@ -17,6 +19,7 @@ not included.
 This document is for getting you started in a few minutes. It cannot answer all
 of your questions. If you have problems, please read the documentation in
 DOCS/HTML/en/index.html, which should help you solve most of your problems.
+
 Also read the man page to learn how to use MPlayer.
 
 **Requirements:**
@@ -35,9 +38,10 @@ Also read the man page to learn how to use MPlayer.
 
 Make sure that your version of X has Xvideo support, without it even very
 fast machines may not be able to properly play high resolution videos in
-fullscreen mode. Consult DOCS/HTML/en/video.html for details. There you may
-also find out about special card-specific video output drivers that can yield
-optimal performance.
+fullscreen mode. 
+
+Consult DOCS/HTML/en/video.html for details. There you may also find out about
+special card-specific video output drivers that can yield optimal performance.
 
 
 ## STEP0: Getting MPlayer
@@ -105,8 +109,9 @@ to see the available options and select what you need.
 
 The configure script prints a summary of enabled and disabled options. If you
 have something installed that configure fails to detect, check the file
-config.log for errors and reasons for the failure. Repeat this step until
-you are satisfied with the enabled feature set.
+config.log for errors and reasons for the failure. 
+
+Repeat this step until you are satisfied with the enabled feature set.
 
 
 ## STEP3: Compiling MPlayer
@@ -149,9 +154,11 @@ To clean up the source tree run the following command:
 
 You can use any TrueType font installed on your system. Just pass '-font
 /path/to/font.ttf' on the command line or add 'font=/path/to/font.ttf' to
-your configuration file. The manual page has more details. Alternatively
-you can create a symbolic link from either ~/.mplayer/subfont.ttf or
-/usr/local/share/mplayer/subfont.ttf to your TrueType font.
+your configuration file. 
+
+The manual page has more details. Alternatively you can create a symbolic
+link from either ~/.mplayer/subfont.ttf or /usr/local/share/mplayer/subfont.ttf
+to your TrueType font.
 
 
 ## STEP5: Installing a GUI skin
@@ -159,8 +166,9 @@ you can create a symbolic link from either ~/.mplayer/subfont.ttf or
 Unpack the archive and put the contents in /usr/local/share/mplayer/skins/ or
 ~/.mplayer/skins/. MPlayer will use the skin in the subdirectory named default
 of /usr/local/share/mplayer/skins/ or ~/.mplayer/skins/ unless told otherwise
-via the '-skin' switch. You should therefore rename your skin subdirectory or
-make a suitable symbolic link.
+via the '-skin' switch. 
+
+You should therefore rename your skin subdirectory or make a suitable symbolic link.
 
 
 ## STEP6: Let's play!
@@ -188,12 +196,14 @@ with the '-vo' switch to see which one gives you the best performance.
 
 If you get jerky playback or no sound, experiment with the '-ao' switch (see
 '-ao help') to choose between different audio drivers. Note that jerky playback
-is caused by buggy audio drivers or a slow processor and video card. With a
-good audio and video driver combination, one can play DVDs and 720x576 MPEG-4
-files smoothly on a Celeron 366. Slower systems may need the '-framedrop'
+is caused by buggy audio drivers or a slow processor and video card.
+
+With a good audio and video driver combination, one can play DVDs and 720x576
+MPEG-4 files smoothly on a Celeron 366. Slower systems may need the '-framedrop'
 option.
 
 Questions you may have are probably answered in the rest of the documentation.
 The places to start reading are the man page, DOCS/HTML/en/index.html and
-DOCS/HTML/en/faq.html. If you find a bug, please report it, but first read
-DOCS/HTML/en/bugreports.html.
+DOCS/HTML/en/faq.html.
+
+If you find a bug, please report it, but first read DOCS/HTML/en/bugreports.html.
