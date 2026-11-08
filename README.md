@@ -46,7 +46,7 @@ Official releases and Subversion snapshots, as well as binary codec packages
 and a number of different skins for the GUI are available from the download
 section of our homepage at
 
-  http://www.mplayerhq.hu/dload.html
+  https://www.mplayerhq.hu/dload.html
 
 MPlayer has builtin support for the most common audio and video formats. For a
 few formats no native decoder exists and external binary codecs are required
@@ -71,7 +71,7 @@ A directory named 'mplayer' will be created. It will include all necessary
 FFmpeg libraries, you don't need to get them separately as was the case in
 the past. You can later update your sources by saying
 
-  svn update
+  `svn update`
 
 from within that directory.
 
@@ -88,18 +88,18 @@ something else by passing the '--codecsdir' option to './configure'.
 
 MPlayer can be adapted to all kinds of needs and hardware environments. Run
 
-  ./configure
+  `./configure`
 
 to configure MPlayer with the default options. GUI support has to be enabled
 separately, run
 
-  ./configure --enable-gui
+  `./configure --enable-gui`
 
 if you want to use the GUI.
 
 If something does not work as expected, try
 
-  ./configure --help
+  `./configure --help`
 
 to see the available options and select what you need.
 
@@ -113,11 +113,11 @@ you are satisfied with the enabled feature set.
 
 Now you can start the compilation by typing
 
-  make
+  `make`
 
 You can install MPlayer with
 
-  make install
+  `make install`
 
 provided that you have write permission in the installation directory.
 
@@ -131,19 +131,19 @@ Sometimes running 'ldconfig' is enough to fix the problem.
 **NOTE:** If you run Debian you can configure, compile and build a proper Debian
 .deb package with only one command:
 
-  debian/daily-build.sh -b
+  `debian/daily-build.sh -b`
 
 You can also pass some variables to the Makefile. For example, if you
 want to compile with gcc 3.4 even if it's not the default compiler, or
 pass extra configure options you would use:
 
-  CC=gcc-3.4 DEB_EXTRA_CONFIGURE_FLAGS="--disable-libdvdcss-internal" debian/daily-build.sh -b
+  `CC=gcc-3.4 DEB_EXTRA_CONFIGURE_FLAGS="--disable-libdvdcss-internal" debian/daily-build.sh -b`
 
 
 To clean up the source tree run the following command:
 
-  fakeroot debian/rules clean
-  rm debian/changelog
+  `fakeroot debian/rules clean`
+  `rm debian/changelog`
 
 ## STEP4: Choose an onscreen display font
 
@@ -167,19 +167,19 @@ make a suitable symbolic link.
 
 That's it for the moment. To start playing movies, open a command line and try
 
-  mplayer <moviefile>
+  `mplayer <moviefile>`
 
 or for the GUI
 
-  gmplayer <moviefile>
+  `gmplayer <moviefile>`
 
 gmplayer is a symbolic link to mplayer created by 'make install'.
 Without <moviefile>, gmplayer will start with the GUI filepicker.
 
 To play a VCD track or a DVD title, try:
 
-  mplayer vcd://2 -cdrom-device /dev/hdc
-  mplayer dvd://1 -alang en -slang hu -dvd-device /dev/hdd
+  `mplayer vcd://2 -cdrom-device /dev/hdc`
+  `mplayer dvd://1 -alang en -slang hu -dvd-device /dev/hdd`
 
 See 'mplayer -help' and 'man mplayer' for further options.
 
